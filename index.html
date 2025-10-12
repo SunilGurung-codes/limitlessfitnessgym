@@ -4,10 +4,31 @@
 <!-- add required and recommended <meta> tags -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- SEO <meta> tags -->
+<meta name="author" content="Limitless_Fitness">
+<meta name="description" content="Transform your life at Limitless Fitness. Join our community for personalized training, fun classes, and state-of-the-art equipment in Mesa, Arizona.">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph <meta> tags -->
+<meta property="og:title" content="Limitless Fitness - Transform Your Life">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://github.com/SunilGurung-codes/limitlessfitnessgym">
+<meta property="og:image" content="">
+
+
+<!-- Twitter Card <meta> tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@LimitlessFitness">
+<meta name="twitter:creator" content="@LimitlessFitness">
+<meta name="twitter:title" content="Limitless Fitness - Transform Your Life">
+<meta name="twitter:description" content="Unleash your strength, embrace the challenge, and begin your fitness journey">
+<meta name="twitter:image" content="https://github.com/SunilGurung-codes/limitlessfitnessgym/images/facility.jpg">
+
+<title>Limitless Fitness - Transform Your Life</title>
 </head>
 <body>
 <!-- add a skip link that skips to the main content -->
- <a href="#main-content" name="skip-link">Skip to Main content</a>
+ <a href="#main-content" class="skip-link">Skip to Main content</a>
 <!-- add correct heading levels -->
   <header>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round" width="75" height="75" stroke-width="1.5">
@@ -21,11 +42,10 @@
     </svg> 
     <h1>Transform Your Life at Limitless Fitness</h1>
     <p>Unleash your strength, embrace the challenge, and join a community dedicated to your fitness journey.</p>
-    <a href="#">Join Now</a>
+    <a href="#membership-form">Join Now</a>
 <!-- add alt text where necessary -->
 <!-- add responsive images for resolution switching -->
-    
-      src="images/facility.jpg"
+      <img src="images/facility.jpg" srcset="images/facility-320w.jpg 320w, images/facility-768w.jpg 768w" sizes="(max-width: 320px) 320px, 768px" alt="Modern fitness facility with state-of-the-art equipment">
 
   </header>
   <nav>
@@ -65,7 +85,8 @@
       </ul>
 <!-- add alt text where necessary -->
 <!-- add responsive images for resolution switching -->
-        src="images/classes.jpg"
+        
+        <img src="images/classes.jpg" srcset="images/classes-320w.jpg 320w, images/classes-768w.jpg 768w" sizes="(max-width: 320px) 320px, 768px" alt="Group fitness class with participants exercising together">
 
     </section>
     <section id="Personal-Training">
@@ -74,10 +95,11 @@
         Take your fitness to the next level with our one-on-one training sessions. Our certified trainers work with you to create a customized plan that fits your lifestyle and targets your specific goals.
         Ready for a change?
       </p> 
-      <a href="#">Book a Free Consultation today!</a>
+      <a href="#membership-form">Book a Free Consultation today!</a>
 <!-- add alt text where necessary -->
 <!-- add responsive images for resolution switching -->
-        src="images/dumbells.jpg"
+        
+        <img src="images/dumbells.jpg" srcset="images/dumbells-320w.jpg 320w, images/dumbells-768w.jpg 768w" sizes="(max-width: 320px) 320px, 768px" alt="Row of dumbbells on a rack in the weight training room">
 
     </section>
     <section id="Membership-options">
@@ -92,16 +114,35 @@
         <h3>Join Limitless Fitness Today!</h3>
         <p>Fill out the form below to kickstart your fitness journey:</p>
 <!--add accessibility to the form-->
-        Full Name
-        Email Address
-        Phone Number
-        Membership Type
-          Select a Membership Option
-          Monthly Membership
-          Annual Membership
-          Family & Group Plans
+        <form action="https://wp.zybooks.com/form-viewer.php" method="post">
+          <div>
+            <label for="full-name">Full Name</label>
+            <input id="full-name" type="text" name="full-name" required>
+          </div>
+          <div>
+            <label for="email">Email Address</label>
+            <input id="email" type="email" name="email" required>
+          </div>
+          <div>
+            <label for="phone">Phone Number</label>
+            <input id="phone" type="tel" name="phone" required>
+          </div>
+          <div>
+            <label for="membership-type">Membership-type</label>
+            <select id="membership-type" name="membership-type" required>
+              <option value="">Select a Membership Option</option>
+              <option value="monthly">Monthly Membership</option>
+              <option value="annual">Annual Membership</option>
+              <option value="family">Family & Group Plans</option>
+            </select>
+          </div>
+          <div>
+            <label for="fitness-goals">Tell us about your fitness goals:</label>
+            <textarea id="fitness-goals" type="textarea" rows="5" required></textarea>
+          </div>
         Tell us about your fitness goals:
-        Submit
+        <button type="submit">Submit</button>
+      </form>
       </section>
     </section>
   </main>
